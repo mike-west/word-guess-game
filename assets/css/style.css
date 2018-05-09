@@ -1,0 +1,6 @@
+/* in bootstrap 4.1 box-sizing: border-box is the default
+see https://getbootstrap.com/docs/4.1/getting-started/introduction/#box-sizing
+*/
+* {
+    border: 1px solid red;
+  }
