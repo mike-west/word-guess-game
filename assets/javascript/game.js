@@ -10,7 +10,6 @@ var hiddenSong = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     currentDoc = document;
-    alert("WARNING starting new game from inside DOMContentLoad event listener");
     newGame();
 });
 
