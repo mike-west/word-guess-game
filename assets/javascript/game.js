@@ -75,7 +75,7 @@ document.onkeyup = function(event) {
         setElements('Sorry ' + userGuess + " isn't in the song title, press another letter");
     } else {
         for(var i = 0; i < letterLocations.length; ++i) {
-            hiddenSong[letterLocations[i]] = userGuess;
+            hiddenSong[letterLocations[i]] = artist.song.charAt(letterLocations[i]);
         }  
         setElements('All right! ' + userGuess + ' occurs in ' + letterLocations.length + ' places!')        
     }
