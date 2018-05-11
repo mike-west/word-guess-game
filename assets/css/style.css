@@ -38,3 +38,7 @@ div * {
   background-image: url('../images/musicimg4.jpg');
   background-size: contain;
 }
+
+#wins, #artist, #song, #lettersGuessed, #remainingGuesses {
+  border-left: 0px;
+}
