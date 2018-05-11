@@ -15,3 +15,15 @@ div * {
   border: 0px;
   text-align: left;
 }
+
+#leftHeaderImg {
+  background-image: url('../images/musicimg2.jpg');
+  background-size: cover;
+  /* height: 200px; */
+}
+
+#mainimg  {
+  background-image: url('../images/musicimg1.jpg');
+  background-size: cover;
+  height: 200px;
+}
