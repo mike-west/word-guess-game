@@ -1,11 +1,12 @@
 var currentDoc = null;
 var wins = 0;
 var remainingGuesses = 0;
-var readyToStart = 'Press any key to start a new game';
-var gameInProgress = 'Game is in progress';
+var readyToStart = 'Press any key to guess guess a letter';
+var gameInProgress = 'Game is in progress, press any key to guess another';
 var lettersGuessed = [];
 var artist = getRandomArtist();
 var hiddenSong = [];
+var stateMsg;
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -49,8 +50,10 @@ function newGame() {
 function gameOver(result) {
     if (result === 'won') {
         ++wins;
-        alert('You won!');
+        setElements('You won! Press any key to start a new game')
+        alert('You won! The song was ' + artist.song);
     } else {
+        setElements('You lost, Press any key to start a new game');
         alert('Sorry, better luck next time')
     }
 }
@@ -61,16 +64,20 @@ newGame();
 document.onkeyup = function(event) {
     var userGuess = event.key;
 
+    if (userGuess === ' ') { 
+        return; // ignore spaces
+    }
+
     letterLocations = getIndexesOfLetters(artist.song, userGuess);
     if (letterLocations.length === 0) {
-        alert('Sorry ' + userGuess + "isn't in the song title");
         --remainingGuesses;
         lettersGuessed.push(userGuess);
+        setElements('Sorry ' + userGuess + " isn't in the song title, press another letter");
     } else {
-        alert('All right! ' + userGuess + ' occurs in ' + letterLocations.length + ' places!');
         for(var i = 0; i < letterLocations.length; ++i) {
             hiddenSong[letterLocations[i]] = userGuess;
-        }          
+        }  
+        setElements('All right! ' + userGuess + ' occurs in ' + letterLocations.length + ' places!')        
     }
 
     setElements(gameInProgress);
