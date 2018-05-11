@@ -19,11 +19,20 @@ div * {
 #leftHeaderImg {
   background-image: url('../images/musicimg2.jpg');
   background-size: cover;
-  /* height: 200px; */
 }
 
 #mainimg  {
   background-image: url('../images/musicimg1.jpg');
   background-size: cover;
   height: 200px;
+}
+
+#leftcontrolimg {
+  background-image: url('../images/musicimg3.jpg');
+  background-size: cover;
+}
+
+#rightcontrolimg {
+  background-image: url('../images/musicimg4.jpg');
+  background-size: contain;
 }
