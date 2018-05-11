@@ -39,6 +39,10 @@ div * {
   background-size: contain;
 }
 
-#wins, #artist, #song, #lettersGuessed, #remainingGuesses {
+#wins, #artist, #song, #lettersGuessed, #remaingGuesses {
   border-left: 0px;
+}
+
+.label {
+  border-right: 0px;
 }
