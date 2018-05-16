@@ -10,18 +10,5 @@ function getRandomArtist() {
     return artistArr[Math.floor(Math.random() * artistArr.length)];
 }
 
-/* given a word and a letter, returns an array of numbers where that
-    letter occurs in the word. Returns an empty array if the letter 
-    doesn't occur
-*/
-function getIndexesOfLetters(word, letter) {
-    var indexes = [];
-    for(var i = 0; i < word.length; ++i) {
-        if (letter.toLowerCase() === word.charAt(i).toLowerCase()) {
-            indexes.push(i);
-        }
-    }
 
-    return indexes;
-}
 
